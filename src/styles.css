@@ -78,14 +78,14 @@ q:after {
 }
 
 ::selection {
-  background-color: #2d2d2d;
-  color: #eeeeee;
+  background-color: #F299B1;
+  color: #ADD9C9;
 }
 
 @media (prefers-color-scheme: dark) {
   ::selection {
-    background-color: #eeeeee;
-    color: #2d2d2d;
+    background-color: #ADD9C9;
+    color: #F299B1;
   }
 }
 
@@ -120,6 +120,7 @@ td {
 svg {
   display: block;
   fill: currentColor;
+  pointer-events: none;
 }
 
 body {
@@ -127,7 +128,7 @@ body {
   font-size: 1rem;
   font-family: "Montserrat", sans-serif;
   color: #2d2d2d;
-  background-color: #eeeeee;
+  background-color: #f7f7f7;
   /* optional */
   /* optional */
   hyphens: auto;
@@ -141,29 +142,216 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    color: #eeeeee;
+    color: #f7f7f7;
     background-color: #2d2d2d;
   }
 }
 
 #root {
-  min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1 {
+  font-size: 1.8em;
+}
+
+.h2 {
+  font-size: 1.6em;
+  font-weight: 700;
+  margin: 1em 0;
+}
+
+.h4 {
+  font-size: 1.4em;
+}
+
+.a {
+  color: #F299B1;
+}
+
+.a:hover {
+  color: #ADD9C9;
+}
+
+.react-icons {
+  fill: #2d2d2d;
+}
+
+.header {
+  width: 100%;
+}
+
+.nav {
+  width: 100%;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transition: background-color .5s ease-in-out 0s;
 }
 
 @media screen and (min-width: 768px) {
-  #root {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    gap: 0;
-    grid-template-columns: auto 1fr;
+  .nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
-.show {
+.nav__collapser {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__a {
+  font-weight: 600;
+  color: #2d2d2d;
+  padding: 0.5em;
+}
+
+.nav__a:hover {
+  color: #F299B1;
+}
+
+.nav__ul {
+  width: 100%;
+  text-align: end;
+  overflow: hidden;
+  transform: translateY(-15em);
+  padding: 0 1em 1em 1em;
+  margin-top: 1em;
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  transition: background-color .5s ease-in-out, transform .5s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__ul {
+    width: fit-content;
+    transform: none;
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+  }
+}
+
+.collapser__btn {
   display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .collapser__btn {
+    display: none;
+  }
+}
+
+.collapser__btn .react-icons {
+  font-size: 1.2em;
+}
+
+.main {
+  margin-top: 5em;
+}
+
+.section {
+  min-height: 40vh;
+  max-width: 1256px;
+  text-align: center;
+  padding: 2em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.section--headline {
+  min-height: 80vh;
+}
+
+.section--proficiencies {
+  background-color: rgba(242, 153, 177, 0.2);
+  border-top: 1em dashed #add9c9;
+  border-bottom: 1em dashed #add9c9;
+}
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.article {
+  max-width: 20em;
+  min-height: 30em;
+  background-color: #f7f7f7;
+  text-align: center;
+  border: 3px solid #ADD9C9;
+  border-radius: 25px;
+  box-shadow: none;
+  margin: 1em;
+  padding: 1.5em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  transition: box-shadow .2s ease-in-out;
+}
+
+.article:hover {
+  box-shadow: 0 0 10px 5px rgba(242, 153, 177, 0.5);
+  transition: box-shadow .2s ease-in-out;
+}
+
+.article__a {
+  border: 3px solid #F299B1;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+}
+
+.footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__span {
+  display: flex;
+}
+
+.show {
+  top: 3em;
+  transform: translateY(0);
+}
+
+.bg-secondary {
+  background-color: #ADD9C9;
+}
+
+.bg-secondary--light {
+  background-color: #add9c9b3;
+}
+
+@media screen and (min-width: 768px) {
+  .bg-secondary {
+    background-color: transparent;
+  }
+}
+
+.bg-transparent {
+  background-color: transparent;
 }

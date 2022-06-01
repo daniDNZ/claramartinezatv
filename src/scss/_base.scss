@@ -7,13 +7,15 @@
 
 // Colors
 $colors: (
-    '1'     : rgb(45, 45, 45),
-    '2'     : rgb(238, 238, 238),
+    '1'     : #F299B1,
+    '2'     : #ADD9C9,
     '3'     : rgb(219, 37, 37),
     '4'     : rgb(221, 108, 108),
     '5'     : rgb(130, 51, 51),
     '6'     : rgb(208, 208, 208),
     '7'     : rgb(127, 127, 127),
+    '8'     : rgb(247, 247, 247),
+    '9'     : rgb(45, 45, 45),
 );
 
 // Fonts
@@ -24,13 +26,15 @@ $fonts: (
 // Variables
 $color-primary          : map-get($colors, '1');
 $color-secondary        : map-get($colors, '2');
-$color-high             : map-get($colors, '3');
-$color-link             : map-get($colors, '5');
+$color-high             : map-get($colors, '2');
+$color-link             : map-get($colors, '1');
 $color-link-dark        : map-get($colors, '4');
 $color-primary-dark     : map-get($colors, '2');
 $color-secondary-dark   : map-get($colors, '1');
 $color-input            : map-get($colors, '6');
 $color-input-dark       : map-get($colors, '7');
+$color-light            : map-get($colors, '8');
+$color-dark             : map-get($colors, '9');
 
 
 // Fonts
@@ -192,6 +196,7 @@ svg {
     // width: 100%;
     display: block;
     fill: currentColor;
+    pointer-events: none; // To fix the click event
 }
 
 // General Typo
@@ -199,8 +204,8 @@ body {
     min-height: 100vh;
     font-size: 1rem;
     font-family: $font-primary;
-    color: $color-primary;
-    background-color: $color-secondary;
+    color: $color-dark;
+    background-color: $color-light;
     /* optional */
     // line-height: 1.4em;
     /* optional */
@@ -213,8 +218,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
 
     @include darkMode(){
-        color: $color-primary-dark;
-        background-color: $color-secondary-dark;
+        color: $color-light;
+        background-color: $color-dark;
     }
 }
 

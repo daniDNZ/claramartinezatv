@@ -9,7 +9,7 @@
     display: flex;
     flex-flow: $direction $wrap;
     justify-content: $justify;
-    align-content: $align;
+    align-items: $align;
 }
 
 @mixin responsive($width: 768px) {
@@ -19,13 +19,224 @@
 }
 
 #root {
-    min-height: 100vh;
 
-    @include flex(column, nowrap, flex-start, center);
+    @include flex(column, nowrap, center, center);
 
-    @include responsive() {
+}
 
-        @include grid(2, 1, 0);
-        grid-template-columns: auto 1fr;
+
+// GLOBALS
+
+.h1 {
+    font-size: 1.8em;
+}
+
+.h2 { 
+    font-size: 1.6em;
+    font-weight: 700;
+
+    margin: 1em 0;
+}
+
+.h4 {
+    font-size: 1.4em;
+}
+
+.p {}
+
+.a {
+    color: $color-link;
+
+    &:hover {
+        color: $color-high;
+    }
+}
+
+.react-icons {
+    fill: $color-dark;
+}
+
+// HEADER
+
+.header {
+    width: 100%;
+
+
+}
+
+.nav {
+    width: 100%;
+    // background-color: rgba($color-secondary, .7);
+    padding: 1em;
+
+    position: fixed;
+    top: 0;
+
+    z-index: 100;
+
+    transition: background-color .5s ease-in-out 0s;
+
+    @include responsive {
+        @include flex(row, nowrap, space-between, center);
+    }
+
+    &__collapser {
+        
+        @include flex(row, nowrap, space-between, center);
+
+    }
+    &__a {
+        font-weight: 600;
+        color: $color-dark;
+
+        padding: 0.5em;
+    }
+    
+    &__a:hover {
+        color: $color-link;
+    }
+    
+    &__li {}
+
+
+    &__ul {
+        width: 100%;
+        text-align: end;
+        overflow: hidden;
+        // opacity: 0;
+        transform: translateY(-15em);
+
+        padding: 0 1em 1em 1em;
+        margin-top: 1em;
+        
+        position: absolute;
+        left: 0;
+
+        z-index: 0;
+
+
+        transition: background-color .5s ease-in-out,
+            transform .5s ease-in-out;
+
+        @include responsive(){
+            width: fit-content;
+            transform: none;
+            margin-top: 0;
+
+            padding: 0;
+            
+            @include flex(row, nowrap, flex-end, center);
+            position: relative;
+        }
+    }
+    
+}
+.collapser__btn {
+    display: block;
+
+    @include responsive(){
+        display: none;
+    }
+
+    & .react-icons {
+        font-size: 1.2em;
+    }
+}
+
+
+// MAIN
+.main {
+    margin-top: 5em;
+
+}
+
+.section {
+    min-height: 40vh;
+    max-width: 1256px;
+    text-align: center;
+
+    padding: 2em;
+
+    @include flex(column, nowrap, center, center);
+    position: relative;
+}
+
+// ... Headline 
+
+.section--headline {
+    min-height: 80vh;
+}
+
+// ... Proficiencies
+
+.section--proficiencies {
+    background-color: rgba($color-primary, .2);
+    border-top: 1em dashed rgba($color-secondary, 1);
+    border-bottom: 1em dashed rgba($color-secondary, 1);
+}
+
+.grid {
+    @include flex(row, wrap, center, center);
+}
+
+.article {
+    max-width: 20em;
+    min-height: 30em;
+    background-color: $color-light;
+    text-align: center;
+    border: 3px solid $color-secondary;
+    border-radius: 25px;
+    box-shadow: none;
+
+    margin: 1em;
+    padding: 1.5em;
+
+    @include flex(column, nowrap, space-between, center);
+    gap: 2em;
+
+    transition: box-shadow .2s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 0 10px 5px rgba($color-primary, .5);
+
+        transition: box-shadow .2s ease-in-out;
+    }
+
+    &__a {
+        border: 3px solid $color-primary;
+        border-radius: 10px;
+
+        padding: 0.5em 1em;
+    }
+
+}
+
+// ... About
+
+
+// ... Contact
+
+.alert {
+    &__text {}
+}
+
+.button {}
+
+.form {
+    &__button {}
+
+    &__fieldset {}
+
+    &__input {
+        &--textarea {}
+    }
+}
+
+// FOOTER
+
+.footer {
+    @include flex(row, nowrap, center, center);
+    &__span {
+        display: flex;
     }
 }

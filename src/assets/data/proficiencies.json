@@ -1,0 +1,44 @@
+[
+    {
+        "img": "/",
+        "title": "Asistencia en cirugía",
+        "p": "La asistencia quirúrgica abarca un gran número de procedimientos quirúrgicos y pre-quirúrgicos en los que ayudar al veterinario: desde preparar el material a asistir en la cirugía, pasando por realizar pruebas de laboratorio de diagnóstico.",
+        "link": "Link",
+        "linkUri": "/"
+    },
+    {
+        "img": "/",
+        "title": "Asistencia en consulta y hospitalización",
+        "p": "Ayudar al veterinario llevando a cabo la correcta manipulación de los animales además de las tareas que sean necesarias, como transportar material sensible, vendajes, administración de medicación, etc.",
+        "link": "Link",
+        "linkUri": "/"
+    },
+    {
+        "img": "/",
+        "title": "Laboratorio",
+        "p": "Llevar a cabo pruebas de laboratorio correctamente, saber interpretarlas y mantener el equipo de laboratorio en buenas condiciones son algunas de las tareas para las que estamos preparadas.",
+        "link": "Link",
+        "linkUri": "/"
+    },
+    {
+        "img": "/",
+        "title": "Mantenimiento de las instalaciones",
+        "p": "Una clínica veterinaria puede ensuciarse de muchas formas y de manera repetida en un solo día. El/La auxiliar debe estar siempre al pie del cañón para que todo siga en su sitio e impecable.",
+        "link": "Link",
+        "linkUri": "/"
+    },
+    {
+        "img": "hand.svg",
+        "title": "Contacto con los clientes",
+        "p": "Somos la cara de la clínica en la mayoría de ocasiones y, como tal, tenemos siempre una sonrisa en la cara. Nuestras habilidades sociales y comunicativas están a tope.",
+        "link": "Link",
+        "linkUri": "/"
+    },
+    {
+        "img": "/",
+        "title": "Habilidades de gestión",
+        "p": "También sabemos manejarnos con el software de gestión que toque y llevar a cabo las tareas rutinarias de cualquier negocio como facturar, tratar con proveedores, etc.",
+        "link": "Link",
+        "linkUri": "/"
+    }
+]

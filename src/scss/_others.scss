@@ -1,3 +1,20 @@
 .show {
-    display: block;
+    top: 3em;
+    transform: translateY(0);
+}
+
+.bg-secondary {
+    background-color: #ADD9C9;
+
+    &--light {
+        background-color: #add9c9b3;
+    }
+
+    @include responsive{
+        background-color: transparent;
+    }
+}
+
+.bg-transparent {
+    background-color: transparent;
 }
