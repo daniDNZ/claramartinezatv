@@ -164,7 +164,7 @@ body {
   margin: 1em 0;
 }
 
-.h4 {
+.h3 {
   font-size: 1.4em;
 }
 
@@ -216,7 +216,7 @@ body {
 }
 
 .nav__a:hover {
-  color: #F299B1;
+  color: #f5dde4;
 }
 
 .nav__ul {
@@ -262,11 +262,19 @@ body {
 
 .main {
   margin-top: 5em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1256px;
 }
 
 .section {
   min-height: 40vh;
-  max-width: 1256px;
+  min-width: 100%;
   text-align: center;
   padding: 2em;
   display: flex;
@@ -276,14 +284,20 @@ body {
   position: relative;
 }
 
-.section--headline {
+.headline {
   min-height: 80vh;
+  min-width: 100vw;
+  box-shadow: 0 5px 5px 0.5px rgba(45, 45, 45, 0.1);
+}
+
+.headline__h1 {
+  text-align: start;
+  font-weight: 500;
 }
 
 .section--proficiencies {
+  min-width: 100vw;
   background-color: rgba(242, 153, 177, 0.2);
-  border-top: 1em dashed #add9c9;
-  border-bottom: 1em dashed #add9c9;
 }
 
 .grid {
@@ -298,7 +312,6 @@ body {
   min-height: 30em;
   background-color: #f7f7f7;
   text-align: center;
-  border: 3px solid #ADD9C9;
   border-radius: 25px;
   box-shadow: none;
   margin: 1em;
@@ -308,21 +321,115 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 2em;
-  transition: box-shadow .2s ease-in-out;
+  transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
 }
 
 .article:hover {
-  box-shadow: 0 0 10px 5px rgba(242, 153, 177, 0.5);
-  transition: box-shadow .2s ease-in-out;
+  box-shadow: 0 0 10px 5px rgba(242, 153, 177, 0.2);
+  transform: scale(1.02);
+  transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
 }
 
 .article__a {
-  border: 3px solid #F299B1;
+  font-weight: 600;
+  border: 2px solid #ADD9C9;
+  color: #ADD9C9;
   border-radius: 10px;
   padding: 0.5em 1em;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.article__a:hover {
+  background-color: #ADD9C9;
+  color: #f7f7f7;
+  border-color: transparent;
+  transform: scale(1.08);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.about {
+  min-height: 50vh;
+  border-top: 1em solid #ADD9C9;
+  border-bottom: 1em solid #ADD9C9;
+}
+
+.about__pic {
+  max-width: 10em;
+  border-radius: 25px;
+  margin: 0 0 0 1em;
+  float: right;
+}
+
+.about__p {
+  text-align: start;
+}
+
+.about__social {
+  width: 100%;
+  margin: 1em 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.social__a .react-icons {
+  font-size: 2em;
+  fill: #F299B1;
+  transition: fill .2s ease-in-out, transform .2s ease-in-out;
+}
+
+.social__a:hover .react-icons {
+  fill: #ADD9C9;
+  transform: scale(1.2);
+  transition: fill .2s ease-in-out, transform .2s ease-in-out;
+}
+
+.contact__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.contact__text {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__text {
+    max-width: 50%;
+  }
+}
+
+.contact__h3 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #F299B1;
+  margin: 0 0 1em 0;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__h3 {
+    font-size: 3em;
+    font-weight: 900;
+  }
+}
+
+.contact__p {
+  font-size: 1.4em;
+}
+
+@media screen and (min-width: 768px) {
+  .contact__p {
+    font-size: 2em;
+  }
 }
 
 .footer {
+  padding: 2em;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -331,6 +438,64 @@ body {
 
 .footer__span {
   display: flex;
+}
+
+.form {
+  background-color: #ADD9C9;
+  border-radius: 25px;
+  padding: 3em;
+}
+
+.form__input, .form__button {
+  width: 100%;
+  background-color: #f7f7f7;
+  border-radius: 25px;
+  margin: 0.5em 0;
+  padding: 1em;
+}
+
+.form__input {
+  transition: transform .2s ease-in-out;
+}
+
+.form__input:focus {
+  transform: scale(1.05);
+  transition: transform .2s ease-in-out;
+}
+
+.form__button {
+  margin-top: 1em;
+  font-weight: 700;
+  transition: background-color .5s ease-in-out, transform .2s ease-in-out;
+}
+
+.form__button:hover {
+  background-color: #f5dde4;
+  transform: scale(1.08);
+  transition: background-color .5s ease-in-out, transform .2s ease-in-out;
+}
+
+.alert {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: transparent;
+  padding: 0.5em;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transition: .2s ease-in 0s;
+}
+
+.alert--active {
+  display: block;
+  width: 9em;
+  color: inherit;
+  transition: .2s ease-in 0s;
+}
+
+.alert--fail {
+  color: #a45d5d;
 }
 
 .show {

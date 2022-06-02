@@ -51,19 +51,24 @@ export default function Contact() {
 
     return (
         <>
-            <section id="contact" className="section">
-                <h2 className="h2">Contact</h2>
-                <form method="post" className="form" onSubmit={handleForm} >
-                    <fieldset className="form__fieldset">
-                        <input type="text" name="name" id="name" placeholder="_name" className="form__input" required />
-                        <input type="email" name="email" id="email" className="form__input" placeholder="_email" required />
-                    </fieldset>
-                    <textarea name="message" id="message" cols="30" rows="5" className="form__input form__input--textarea" placeholder="_message" required></textarea>
-                    <input type="submit" className="form__button button" value="Send" data-content="visit"></input>
-                    <div className="alert">
-                        <span className="alert__text">Algo ha ido mal...</span>
+            <section id="contact" className="section contact">
+                <div className="container contact__container">
+                    <div className="contact__text">
+                        <h3 className="h3 contact__h3">Envíame un mensaje y te contestaré lo más rápido posible</h3>
+                        <p className="p contact__p">Podemos hablar de lo que quieras, me encantará leerte!</p>
                     </div>
-                </form>
+                    <form method="post" className="form" onSubmit={handleForm} >
+                        <fieldset className="form__fieldset">
+                            <input type="text" name="name" id="name" placeholder="nombre" className="form__input" required />
+                            <input type="email" name="email" id="email" className="form__input" placeholder="e-mail" required />
+                        </fieldset>
+                        <textarea name="message" id="message" cols="30" rows="5" className="form__input form__input--textarea" placeholder="mensaje" required></textarea>
+                        <input type="submit" className="form__button button" value="Guau!" data-content="visit"></input>
+                        <div className="alert">
+                            <span className="alert__text">Algo ha ido mal...</span>
+                        </div>
+                    </form>
+                </div>
             </section>
         </>
     )

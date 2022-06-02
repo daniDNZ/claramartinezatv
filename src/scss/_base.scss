@@ -9,7 +9,7 @@
 $colors: (
     '1'     : #F299B1,
     '2'     : #ADD9C9,
-    '3'     : rgb(219, 37, 37),
+    '3'     : rgb(245,221,228),
     '4'     : rgb(221, 108, 108),
     '5'     : rgb(130, 51, 51),
     '6'     : rgb(208, 208, 208),
@@ -27,7 +27,7 @@ $fonts: (
 $color-primary          : map-get($colors, '1');
 $color-secondary        : map-get($colors, '2');
 $color-high             : map-get($colors, '2');
-$color-link             : map-get($colors, '1');
+$color-link             : map-get($colors, '3');
 $color-link-dark        : map-get($colors, '4');
 $color-primary-dark     : map-get($colors, '2');
 $color-secondary-dark   : map-get($colors, '1');

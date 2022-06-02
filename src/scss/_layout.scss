@@ -31,21 +31,21 @@
     font-size: 1.8em;
 }
 
-.h2 { 
+.h2 {
     font-size: 1.6em;
     font-weight: 700;
 
     margin: 1em 0;
 }
 
-.h4 {
+.h3 {
     font-size: 1.4em;
 }
 
 .p {}
 
 .a {
-    color: $color-link;
+    color: $color-primary;
 
     &:hover {
         color: $color-high;
@@ -81,21 +81,22 @@
     }
 
     &__collapser {
-        
+
         @include flex(row, nowrap, space-between, center);
 
     }
+
     &__a {
         font-weight: 600;
         color: $color-dark;
 
         padding: 0.5em;
     }
-    
+
     &__a:hover {
         color: $color-link;
     }
-    
+
     &__li {}
 
 
@@ -108,7 +109,7 @@
 
         padding: 0 1em 1em 1em;
         margin-top: 1em;
-        
+
         position: absolute;
         left: 0;
 
@@ -118,23 +119,24 @@
         transition: background-color .5s ease-in-out,
             transform .5s ease-in-out;
 
-        @include responsive(){
+        @include responsive() {
             width: fit-content;
             transform: none;
             margin-top: 0;
 
             padding: 0;
-            
+
             @include flex(row, nowrap, flex-end, center);
             position: relative;
         }
     }
-    
+
 }
+
 .collapser__btn {
     display: block;
 
-    @include responsive(){
+    @include responsive() {
         display: none;
     }
 
@@ -147,12 +149,18 @@
 // MAIN
 .main {
     margin-top: 5em;
+    @include flex(column, nowrap, center, center);
+
+}
+
+.container {
+    max-width: 1256px;
 
 }
 
 .section {
     min-height: 40vh;
-    max-width: 1256px;
+    min-width: 100%;
     text-align: center;
 
     padding: 2em;
@@ -163,16 +171,22 @@
 
 // ... Headline 
 
-.section--headline {
+.headline {
     min-height: 80vh;
+    min-width: 100vw;
+    box-shadow: 0 5px 5px 0.5px rgba($color-dark, .1);
+
+    &__h1 {
+        text-align: start;
+        font-weight: 500;
+    }
 }
 
 // ... Proficiencies
 
 .section--proficiencies {
+    min-width: 100vw;
     background-color: rgba($color-primary, .2);
-    border-top: 1em dashed rgba($color-secondary, 1);
-    border-bottom: 1em dashed rgba($color-secondary, 1);
 }
 
 .grid {
@@ -184,7 +198,7 @@
     min-height: 30em;
     background-color: $color-light;
     text-align: center;
-    border: 3px solid $color-secondary;
+    // border: 3px solid $color-secondary;
     border-radius: 25px;
     box-shadow: none;
 
@@ -194,48 +208,133 @@
     @include flex(column, nowrap, space-between, center);
     gap: 2em;
 
-    transition: box-shadow .2s ease-in-out;
+    transition: box-shadow .2s ease-in-out,
+        transform .2s ease-in-out;
 
     &:hover {
-        box-shadow: 0 0 10px 5px rgba($color-primary, .5);
+        box-shadow: 0 0 10px 5px rgba($color-primary, .2);
+        transform: scale(1.02);
 
-        transition: box-shadow .2s ease-in-out;
+        transition: box-shadow .2s ease-in-out,
+            transform .2s ease-in-out;
     }
 
     &__a {
-        border: 3px solid $color-primary;
+        font-weight: 600;
+        border: 2px solid $color-secondary;
+        color: $color-secondary;
         border-radius: 10px;
 
         padding: 0.5em 1em;
+
+        transition: background-color 0.2s ease-in-out,
+            color 0.2s ease-in-out,
+            border-color 0.2s ease-in-out,
+            transform 0.2s ease-in-out;
+    }
+
+    &__a:hover {
+        background-color: $color-secondary;
+        color: $color-light;
+        border-color: transparent;
+        transform: scale(1.08);
+
+        transition: background-color 0.2s ease-in-out,
+            color 0.2s ease-in-out,
+            border-color 0.2s ease-in-out,
+            transform 0.2s ease-in-out;
     }
 
 }
 
 // ... About
+.about {
+    // box-shadow: 0 -5px 5px 0.5px rgba($color-dark, .1);
+    min-height: 50vh;
+    border-top: 1em solid $color-secondary;
+    border-bottom: 1em solid $color-secondary;
 
+    &__pic {
+        max-width: 10em;
+        border-radius: 25px;
+        margin: 0 0 0 1em;
+
+        float: right;
+    }
+
+    &__p {
+        text-align: start;
+    }
+
+    &__social {
+        width: 100%;
+
+        margin: 1em 0;
+
+        @include flex(row, nowrap, center, center);
+        gap: 2em;
+    }
+
+}
+
+.social__a .react-icons{
+    font-size: 2em;
+    fill: $color-primary;
+    transition: fill .2s ease-in-out,
+        transform .2s ease-in-out;
+}
+
+.social__a:hover .react-icons{
+    fill: $color-secondary;
+    transform: scale(1.2);
+
+    transition: fill .2s ease-in-out,
+        transform .2s ease-in-out;
+}
 
 // ... Contact
 
-.alert {
-    &__text {}
-}
-
-.button {}
-
-.form {
-    &__button {}
-
-    &__fieldset {}
-
-    &__input {
-        &--textarea {}
+.contact {
+    &__container {
+        @include flex(row, wrap, center, center);
+        gap: 2em;
     }
+
+    &__text {
+        max-width: 100%;
+
+        @include responsive() {
+            max-width: 50%;
+        }
+    }
+
+    &__h3 {
+        font-size: 2em;
+        font-weight: 700;
+        color: $color-primary;
+        margin: 0 0 1em 0;
+
+        @include responsive() {
+            font-size: 3em;
+            font-weight: 900;
+        }
+    }
+
+    &__p {
+        font-size: 1.4em;
+
+        @include responsive() {
+            font-size: 2em;
+        }
+    }
+
 }
 
 // FOOTER
-
 .footer {
+    padding: 2em;
     @include flex(row, nowrap, center, center);
+
     &__span {
         display: flex;
     }
