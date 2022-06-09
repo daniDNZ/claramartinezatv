@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/claramartinezatv/static/css/main.f910a4a1.css",
-    "main.js": "/claramartinezatv/static/js/main.a21607c0.js",
+    "main.css": "/claramartinezatv/static/css/main.7c3476c1.css",
+    "main.js": "/claramartinezatv/static/js/main.b7a2d3a9.js",
     "static/js/787.e5dd94e5.chunk.js": "/claramartinezatv/static/js/787.e5dd94e5.chunk.js",
     "static/media/staff2.jpg": "/claramartinezatv/static/media/staff2.edb6fd2f9d1c860743a6.jpg",
     "static/media/mask.svg": "/claramartinezatv/static/media/mask.ee25e11a55f7c7de8de7ab08e9723b83.svg",
@@ -11,12 +11,12 @@
     "index.html": "/claramartinezatv/index.html",
     "static/media/desktop.svg": "/claramartinezatv/static/media/desktop.497d6a8e133408fb95df7b7d780abeef.svg",
     "static/media/dog.svg": "/claramartinezatv/static/media/dog.40456a6e98177f89a6d0acf2b3a0a92b.svg",
-    "main.f910a4a1.css.map": "/claramartinezatv/static/css/main.f910a4a1.css.map",
-    "main.a21607c0.js.map": "/claramartinezatv/static/js/main.a21607c0.js.map",
+    "main.7c3476c1.css.map": "/claramartinezatv/static/css/main.7c3476c1.css.map",
+    "main.b7a2d3a9.js.map": "/claramartinezatv/static/js/main.b7a2d3a9.js.map",
     "787.e5dd94e5.chunk.js.map": "/claramartinezatv/static/js/787.e5dd94e5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f910a4a1.css",
-    "static/js/main.a21607c0.js"
+    "static/css/main.7c3476c1.css",
+    "static/js/main.b7a2d3a9.js"
   ]
 }
