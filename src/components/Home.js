@@ -1,7 +1,7 @@
-import About from "./main/About";
-import Contact from "./main/Contact";
-import Headline from "./main/Headline";
-import Proficiencies from "./main/Proficiencies";
+import About from './main/About';
+import Contact from './main/Contact';
+import Headline from './main/Headline';
+import Proficiencies from './main/Proficiencies';
 
 export default function Home() {
 
@@ -13,5 +13,5 @@ export default function Home() {
             <About />
             <Contact />
         </>
-    )
+    );
 }

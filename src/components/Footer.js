@@ -7,5 +7,5 @@ export default function Footer() {
                 Hecho con amor ❤︎ por&nbsp;<a href="https://www.danisanzdev.com" className="a" title="Web de Dani Sanz">Dani Sanz</a>
             </span>
         </footer>
-    )
+    );
 }

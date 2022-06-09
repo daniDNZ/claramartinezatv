@@ -1,5 +1,5 @@
-import cPic from "../../assets/img/staff2.jpg";
-import{BsLinkedin, BsInstagram} from "react-icons/bs";
+import cPic from '../../assets/img/staff2.jpg';
+import {BsLinkedin, BsInstagram} from 'react-icons/bs';
 
 export default function About() {
 
@@ -22,5 +22,5 @@ export default function About() {
                 </div>
             </section>
         </>
-    )
+    );
 }

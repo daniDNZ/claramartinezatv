@@ -1,3 +1,98 @@
+@use "base" as *;
+@use "layout";
+
+.carousel {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    position: relative;
+    left: 0;
+    top: 0;
+
+    &__page {
+
+        background-color: aqua;
+        width: 100vw;
+        height: 100vh;
+
+        position: absolute;
+        top: 0;
+        left: 100vw;
+
+        @include layout.flex(column, nowrap, center, flex-start);
+
+        transition: left .2s ease-in-out .3s;
+    } 
+    
+    &__on {
+        left: 0vw;
+        z-index: 1;
+
+        transition: left .2s ease-in-out 0s;
+    }
+    
+    &__h1 {
+        margin-left: 3em;
+        opacity: 0;
+
+        transition: opacity .5s ease-in-out .5s;
+    }
+
+    &__on .carousel__h1 {
+        opacity: 1;
+
+        transition: opacity 1s ease-in-out .5s;
+    }
+    
+
+    
+    &__nav {
+        position: absolute;
+        z-index: 100;
+        &--prev {
+            top: calc(50vh - 40px);
+            left: 0;
+        }
+
+        &--next {
+            top: calc(50vh - 40px);
+            right: 0;
+        }
+    }
+
+    &__button {
+        cursor: pointer;
+    }
+
+    &__arrow {
+        width: 5em;
+        height: 5em;
+        fill: rgba($color-light, .8);
+    }
+
+    &__pagination {
+        position: absolute;
+        top: 90vh;
+        left: calc(50vw - 32px);
+        z-index: 100;
+
+        @include layout.flex(row, nowrap, center, center);
+        gap: .5em;
+
+    }
+
+    &__circle {
+        fill: rgba($color-light, $alpha: .7) ;
+
+        transition: fill .5s ease-in-out 0s;
+        
+        &--active {
+            fill: rgba($color-light, $alpha: 1) ;
+            transition: fill .5s ease-in-out 0s;
+        }
+    }
+}
 
 .form {
     background-color: $color-secondary;
@@ -5,8 +100,8 @@
 
     padding: 3em;
 
-    &__input, 
-    &__button{
+    &__input,
+    &__button {
         width: 100%;
         background-color: $color-light;
         border-radius: 25px;
@@ -46,10 +141,10 @@
     width: 0;
     overflow: hidden;
     white-space: nowrap;
-    color: transparent;    
-    
+    color: transparent;
+
     padding: 0.5em;
-    
+
     position: absolute;
     right: 0;
     bottom: 0;

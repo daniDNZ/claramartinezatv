@@ -8,7 +8,6 @@
     transition: none;
   }
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -73,7 +72,7 @@ blockquote::before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -81,7 +80,6 @@ q:after {
   background-color: #F299B1;
   color: #ADD9C9;
 }
-
 @media (prefers-color-scheme: dark) {
   ::selection {
     background-color: #ADD9C9;
@@ -127,8 +125,8 @@ body {
   min-height: 100vh;
   font-size: 1rem;
   font-family: "Montserrat", sans-serif;
-  color: #2d2d2d;
-  background-color: #f7f7f7;
+  color: rgb(45, 45, 45);
+  background-color: rgb(247, 247, 247);
   /* optional */
   /* optional */
   hyphens: auto;
@@ -139,11 +137,10 @@ body {
   /* optional */
   -moz-osx-font-smoothing: grayscale;
 }
-
 @media (prefers-color-scheme: dark) {
   body {
-    color: #f7f7f7;
-    background-color: #2d2d2d;
+    color: rgb(247, 247, 247);
+    background-color: rgb(45, 45, 45);
   }
 }
 
@@ -171,13 +168,12 @@ body {
 .a {
   color: #F299B1;
 }
-
 .a:hover {
   color: #ADD9C9;
 }
 
 .react-icons {
-  fill: #2d2d2d;
+  fill: rgb(45, 45, 45);
 }
 
 .header {
@@ -190,9 +186,8 @@ body {
   position: fixed;
   top: 0;
   z-index: 100;
-  transition: background-color .5s ease-in-out 0s;
+  transition: background-color 0.5s ease-in-out 0s;
 }
-
 @media screen and (min-width: 768px) {
   .nav {
     display: flex;
@@ -201,24 +196,20 @@ body {
     align-items: center;
   }
 }
-
 .nav__collapser {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
 }
-
 .nav__a {
   font-weight: 600;
-  color: #2d2d2d;
+  color: rgb(45, 45, 45);
   padding: 0.5em;
 }
-
 .nav__a:hover {
-  color: #f5dde4;
+  color: rgb(245, 221, 228);
 }
-
 .nav__ul {
   width: 100%;
   text-align: end;
@@ -229,9 +220,8 @@ body {
   position: absolute;
   left: 0;
   z-index: 0;
-  transition: background-color .5s ease-in-out, transform .5s ease-in-out;
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-
 @media screen and (min-width: 768px) {
   .nav__ul {
     width: fit-content;
@@ -249,19 +239,16 @@ body {
 .collapser__btn {
   display: block;
 }
-
 @media screen and (min-width: 768px) {
   .collapser__btn {
     display: none;
   }
 }
-
 .collapser__btn .react-icons {
   font-size: 1.2em;
 }
 
 .main {
-  margin-top: 5em;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -288,8 +275,8 @@ body {
   min-height: 80vh;
   min-width: 100vw;
   box-shadow: 0 5px 5px 0.5px rgba(45, 45, 45, 0.1);
+  padding: 0;
 }
-
 .headline__h1 {
   text-align: start;
   font-weight: 500;
@@ -310,7 +297,7 @@ body {
 .article {
   max-width: 20em;
   min-height: 30em;
-  background-color: #f7f7f7;
+  background-color: rgb(247, 247, 247);
   text-align: center;
   border-radius: 25px;
   box-shadow: none;
@@ -321,15 +308,13 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 2em;
-  transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
-
 .article:hover {
   box-shadow: 0 0 10px 5px rgba(242, 153, 177, 0.2);
   transform: scale(1.02);
-  transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
-
 .article__a {
   font-weight: 600;
   border: 2px solid #ADD9C9;
@@ -338,10 +323,9 @@ body {
   padding: 0.5em 1em;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
-
 .article__a:hover {
   background-color: #ADD9C9;
-  color: #f7f7f7;
+  color: rgb(247, 247, 247);
   border-color: transparent;
   transform: scale(1.08);
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.2s ease-in-out;
@@ -352,18 +336,15 @@ body {
   border-top: 1em solid #ADD9C9;
   border-bottom: 1em solid #ADD9C9;
 }
-
 .about__pic {
   max-width: 10em;
   border-radius: 25px;
   margin: 0 0 0 1em;
   float: right;
 }
-
 .about__p {
   text-align: start;
 }
-
 .about__social {
   width: 100%;
   margin: 1em 0;
@@ -377,13 +358,13 @@ body {
 .social__a .react-icons {
   font-size: 2em;
   fill: #F299B1;
-  transition: fill .2s ease-in-out, transform .2s ease-in-out;
+  transition: fill 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .social__a:hover .react-icons {
   fill: #ADD9C9;
   transform: scale(1.2);
-  transition: fill .2s ease-in-out, transform .2s ease-in-out;
+  transition: fill 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .contact__container {
@@ -393,35 +374,29 @@ body {
   align-items: center;
   gap: 2em;
 }
-
 .contact__text {
   max-width: 100%;
 }
-
 @media screen and (min-width: 768px) {
   .contact__text {
     max-width: 50%;
   }
 }
-
 .contact__h3 {
   font-size: 2em;
   font-weight: 700;
   color: #F299B1;
   margin: 0 0 1em 0;
 }
-
 @media screen and (min-width: 768px) {
   .contact__h3 {
     font-size: 3em;
     font-weight: 900;
   }
 }
-
 .contact__p {
   font-size: 1.4em;
 }
-
 @media screen and (min-width: 768px) {
   .contact__p {
     font-size: 2em;
@@ -435,9 +410,83 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .footer__span {
   display: flex;
+}
+
+.carousel {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.carousel__page {
+  background-color: aqua;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  transition: left 0.2s ease-in-out 0.3s;
+}
+.carousel__on {
+  left: 0vw;
+  z-index: 1;
+  transition: left 0.2s ease-in-out 0s;
+}
+.carousel__h1 {
+  margin-left: 3em;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out 0.5s;
+}
+.carousel__on .carousel__h1 {
+  opacity: 1;
+  transition: opacity 1s ease-in-out 0.5s;
+}
+.carousel__nav {
+  position: absolute;
+  z-index: 100;
+}
+.carousel__nav--prev {
+  top: calc(50vh - 40px);
+  left: 0;
+}
+.carousel__nav--next {
+  top: calc(50vh - 40px);
+  right: 0;
+}
+.carousel__button {
+  cursor: pointer;
+}
+.carousel__arrow {
+  width: 5em;
+  height: 5em;
+  fill: rgba(247, 247, 247, 0.8);
+}
+.carousel__pagination {
+  position: absolute;
+  top: 90vh;
+  left: calc(50vw - 32px);
+  z-index: 100;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.carousel__circle {
+  fill: rgba(247, 247, 247, 0.7);
+  transition: fill 0.5s ease-in-out 0s;
+}
+.carousel__circle--active {
+  fill: #f7f7f7;
+  transition: fill 0.5s ease-in-out 0s;
 }
 
 .form {
@@ -445,34 +494,29 @@ body {
   border-radius: 25px;
   padding: 3em;
 }
-
 .form__input, .form__button {
   width: 100%;
-  background-color: #f7f7f7;
+  background-color: rgb(247, 247, 247);
   border-radius: 25px;
   margin: 0.5em 0;
   padding: 1em;
 }
-
 .form__input {
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
-
 .form__input:focus {
   transform: scale(1.05);
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
-
 .form__button {
   margin-top: 1em;
   font-weight: 700;
-  transition: background-color .5s ease-in-out, transform .2s ease-in-out;
+  transition: background-color 0.5s ease-in-out, transform 0.2s ease-in-out;
 }
-
 .form__button:hover {
-  background-color: #f5dde4;
+  background-color: rgb(245, 221, 228);
   transform: scale(1.08);
-  transition: background-color .5s ease-in-out, transform .2s ease-in-out;
+  transition: background-color 0.5s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .alert {
@@ -484,18 +528,16 @@ body {
   position: absolute;
   right: 0;
   bottom: 0;
-  transition: .2s ease-in 0s;
+  transition: 0.2s ease-in 0s;
 }
-
 .alert--active {
   display: block;
   width: 9em;
   color: inherit;
-  transition: .2s ease-in 0s;
+  transition: 0.2s ease-in 0s;
 }
-
 .alert--fail {
-  color: #a45d5d;
+  color: rgb(164, 93, 93);
 }
 
 .show {
@@ -506,11 +548,9 @@ body {
 .bg-secondary {
   background-color: #ADD9C9;
 }
-
 .bg-secondary--light {
-  background-color: #add9c9b3;
+  background-color: rgba(173, 217, 201, 0.7019607843);
 }
-
 @media screen and (min-width: 768px) {
   .bg-secondary {
     background-color: transparent;
@@ -520,3 +560,5 @@ body {
 .bg-transparent {
   background-color: transparent;
 }
+
+/*# sourceMappingURL=styles.css.map */

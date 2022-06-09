@@ -15,7 +15,7 @@ export default function Header() {
             nav.classList.add('bg-secondary--light');
         }
 
-    }
+    };
 
     const changeColor = (scrollPos) => {
         const nav = document.querySelector('.nav');
@@ -38,14 +38,14 @@ export default function Header() {
             collapse.classList.remove('bg-secondary');
             collapse.classList.add('bg-transparent');
         }
-    }
+    };
 
     // Change nav color when scrollY !== 0
 
     let last_known_scroll_position = 0;
     let ticking = false;
 
-    window.addEventListener('scroll', e => {
+    window.addEventListener('scroll', () => {
         last_known_scroll_position = window.scrollY;
         if (!ticking) {
             window.requestAnimationFrame(() => {
@@ -62,9 +62,9 @@ export default function Header() {
         const clicked = e.target;
         const navCollapse = document.querySelector('.nav__collapse');
         if (!clicked.matches('.collapser__btn')) {
-            if(navCollapse.classList.contains('show')) toggle('.nav__collapse')
+            if(navCollapse.classList.contains('show')) toggle('.nav__collapse');
         }
-    }
+    };
 
 
     return (
@@ -87,5 +87,5 @@ export default function Header() {
                 </ul>
             </nav>
         </header>
-    )
+    );
 }

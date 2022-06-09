@@ -1,3 +1,5 @@
+@use "base" as *;
+
 @mixin grid($columns: 1, $rows: 1, $gap: 0) {
     display: grid;
     grid-template-columns: repeat($columns, 1fr);
@@ -97,8 +99,6 @@
         color: $color-link;
     }
 
-    &__li {}
-
 
     &__ul {
         width: 100%;
@@ -148,7 +148,6 @@
 
 // MAIN
 .main {
-    margin-top: 5em;
     @include flex(column, nowrap, center, center);
 
 }
@@ -175,6 +174,8 @@
     min-height: 80vh;
     min-width: 100vw;
     box-shadow: 0 5px 5px 0.5px rgba($color-dark, .1);
+
+    padding: 0;
 
     &__h1 {
         text-align: start;

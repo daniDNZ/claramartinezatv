@@ -1,3 +1,5 @@
+@use "layout";
+
 .show {
     top: 3em;
     transform: translateY(0);
@@ -10,7 +12,7 @@
         background-color: #add9c9b3;
     }
 
-    @include responsive{
+    @include layout.responsive{
         background-color: transparent;
     }
 }

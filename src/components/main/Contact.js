@@ -4,13 +4,13 @@ export default function Contact() {
         const alert = document.querySelector('.alert');
         alert.classList.remove('alert--active');
         alert.classList.remove('alert--fail');
-    }
+    };
 
     const showAlert = () => {
         const alert = document.querySelector('.alert');
         alert.classList.add('alert--active');
         setTimeout(hideAlert, 5000);
-    }
+    };
 
     const handleData = (d, form) => {
         const alert = document.querySelector('.alert');
@@ -28,7 +28,7 @@ export default function Contact() {
             alertText.textContent = 'Algo ha ido mal...';
             showAlert();
         }
-    }
+    };
 
     const handleForm = (e) => {
         e.preventDefault();
@@ -38,16 +38,16 @@ export default function Contact() {
         const config = {
             method: form.method,
             body: fData
-        }
+        };
 
-        const request = new Request("https://www.danisanzdev.com/sendbymail.php", config);
+        const request = new Request('https://www.danisanzdev.com/sendbymail.php', config);
 
         fetch(request)
             .then(response => response.json())
-            .then(data => { handleData(data, form) })
+            .then(data => { handleData(data, form); })
             .catch(e => console.log(e));
 
-    }
+    };
 
     return (
         <>
@@ -71,5 +71,5 @@ export default function Contact() {
                 </div>
             </section>
         </>
-    )
+    );
 }

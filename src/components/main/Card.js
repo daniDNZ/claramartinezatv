@@ -7,5 +7,5 @@ export default function Card({skill, icon}) {
             <p className="p">{skill.p}</p>
             <a href={skill.linkUri} className="a article__a">{skill.link}</a>
         </article>
-    )
+    );
 }
